@@ -1,6 +1,15 @@
 # Generator-CLI
 
-`generator-cli` is a simple command-line interface (CLI) tool for generating valid Brazilian CPF, CNPJ, and UUID (versions 4 and 6) identifiers. It supports copying generated values directly to your clipboard or printing them to the terminal, with options for formatted or unformatted output.
+<table>
+  <tr>
+    <td width="20%" valign="top">
+      <img src="https://res.cloudinary.com/dwn9rdjf6/image/upload/v1743014228/thomasalmeida.dev/projects/generator-cli.jpg" width="150" alt="generator-cli Logo">
+    </td>
+    <td valign="top">
+      generator-cli is a simple command-line interface (CLI) tool for generating valid Brazilian CPF, CNPJ, and UUID (versions 4 and 6) identifiers. It supports copying generated values directly to your clipboard or printing them to the terminal, with options for formatted or unformatted output.
+    </td>
+  </tr>
+</table>
 
 ## Features
 
@@ -130,4 +139,3 @@ This will remove the binary from `/usr/local/bin`.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
