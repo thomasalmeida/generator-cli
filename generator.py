@@ -8,7 +8,8 @@ import random
 import pyperclip
 import time
 
-INSTALL_DIR = "/usr/local/bin/generator"
+INSTALL_PATH = "/usr/local/bin"
+INSTALL_FILE = os.path.join(INSTALL_PATH, "generator")
 
 def generate_cpf(formatted=True):
     base_numbers = [random.randint(0, 9) for _ in range(9)]
@@ -117,10 +118,12 @@ def uninstall():
 
     click.confirm("Are you sure you want to uninstall the generator CLI?", abort=True)
 
-    # Remove the script directory
-    if os.path.exists(INSTALL_DIR):
-        shutil.rmtree(INSTALL_DIR)
-        click.echo(f"Removed binary: {INSTALL_DIR}")
+    # Remove the executable file
+    if os.path.exists(INSTALL_FILE):
+        os.remove(INSTALL_FILE)
+        click.echo(f"Removed binary: {INSTALL_FILE}")
+    else:
+        click.echo("Generator CLI not found in installation directory.")
 
     click.echo("Uninstallation complete.")
 
